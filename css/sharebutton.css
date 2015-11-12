@@ -1,0 +1,181 @@
+/* SHARE BUTTON STUFF */
+
+div.article-share {
+  position:fixed;
+  width: 100px;
+  left:0px;
+  top:22px;
+}
+div.share-toolbar {
+  width: auto;
+}
+div.article-share div.share-toolbar div.share-icon {
+  float: right;
+  margin: 0 0 0 10px;
+}
+div.article-share div.share-toolbar div.share-buttons-container {
+  left: -50px;
+  top: 26px;
+}
+#share-toolbar,
+.share-buttons-wrapper {
+  position: absolute;
+  padding-top: 15px;
+  background: white;
+  border: 1px solid #e1e1e1;
+  height: 35px;
+  width: 415px;
+  z-index: 2;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+}
+#share-toolbar .fb,
+.share-buttons-wrapper .fb {
+  display: inline-block;
+  width: 125px;
+  height: 20px;
+  margin-left: 10px;
+  border: none;
+}
+#share-toolbar .twitter,
+.share-buttons-wrapper .twitter {
+  margin-left: 15px;
+  width: 80px;
+  height: 20px;
+}
+#share-toolbar .IN-widget,
+.share-buttons-wrapper .IN-widget {
+  margin-left: 15px;
+}
+#share-toolbar .plusone,
+.share-buttons-wrapper .plusone {
+  display: inline-block;
+  height: 20px;
+  width: 32px;
+  margin-left: 15px;
+}
+
+.share-toolbar {
+  z-index: 2;
+  width: 20px;
+  position: absolute;
+}
+.share-toolbar .share-more:hover {
+  background-position: 0px -60px;
+}
+.share-toolbar .share-buttons-container {
+  width: 0px;
+  height: 55px;
+  left: -5px;
+  top: 39px;
+  -webkit-transition: left, opacity, 250ms ease-out;
+  -moz-transition: left, opacity, 250ms ease-out;
+  -o-transition: left, opacity, 250ms ease-out;
+  transition: left, opacity, 250ms ease-out;
+  overflow: hidden;
+  position: absolute;
+  z-index: 99;
+  opacity: 0;
+}
+.share-toolbar .open.share-buttons-container {
+  display: block;
+  width: 230px;
+  opacity: 1;
+  left: 0px;
+  z-index: 900;
+}
+.share-toolbar .share-buttons-wrapper {
+  width: 183px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+.share-toolbar .share-icon {
+  position: relative;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  padding-top: 0;
+  background: transparent url(../css/share_sprite-gray-20x20.png) no-repeat;
+  cursor: pointer;
+}
+.share-toolbar .share-icon .share-iframe {
+  display: block;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  padding: 0;
+  border: 0;
+  background: #FFFFFF;
+  position: absolute;
+  top: -6px;
+  left: -5px;
+  overflow: hidden;
+}
+.share-toolbar .share-icon.open {
+  z-index: 999;
+}
+.share-toolbar .share-icon.open .share-iframe {
+  opacity: 1;
+  width: auto;
+  height: 20px;
+  border: 1px solid #dadada;
+  padding: 6px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  box-shadow: 0 2px 0 #eaeaea;
+  -webkit-box-shadow: 0 2px 0 #eaeaea;
+  -moz-box-shadow: 0 2px 0 #eaeaea;
+}
+.share-toolbar .share-icon:first-child {
+  margin: 0px;
+}
+.share-toolbar .share-more {
+  background-position: 0px -40px;
+  cursor: pointer;
+  height: 17px;
+}
+.share-toolbar .fb-icon {
+  background-position: 0px 0px;
+}
+.share-toolbar .fb-icon .share-iframe {
+  width: 125px;
+}
+.share-toolbar .fb-icon .share-iframe .fb {
+  display: inline-block;
+  width: 125px;
+  height: 20px;
+  border: none;
+}
+.share-toolbar .twitter-icon {
+  background-position: 0px -20px;
+}
+.share-toolbar .twitter-icon .share-iframe .twitter {
+  width: 80px;
+}
+div.share-toolbar div.share-icon:hover div.share-iframe {
+  display: block;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  border: 1px solid #E1E1E1;
+  border-bottom: 4px solid #E1E1E1;
+  padding: 6px 5px;
+}
+
+
+
+
+
+
+    

@@ -1,0 +1,1006 @@
+html, body {
+	font-family: SourceSansPro-Light, Arial, sans-serif;
+	background-color: #FFFFFF;
+}
+#lineChart{
+	width:800px;
+	height:400px;
+}
+
+section#ReutersGraphicsCharts{
+	width:98%;
+	margin: 0 auto 0 auto;
+	position:relative;
+	
+}
+
+section#ReutersGraphicsCharts #mainGraphic{
+  padding-bottom: 10px;
+  width:800px;
+  margin:100px auto 30px auto;
+  position: relative;
+}
+
+section#ReutersGraphicsCharts #mainMapGraphic{
+	width:100%;
+	height:450px;
+}
+
+section#ReutersGraphicsCharts .countriesin {
+  stroke: #ffffff;
+  stroke-linejoin: round;
+}
+
+section#ReutersGraphicsCharts .countriesin:hover{
+	fill:orange;
+}
+
+section#ReutersGraphicsCharts .plot{
+fill: #ffffff;
+}
+
+.tip1, .tip2, .tip3 {
+	text-align: center;
+	font-size: 10pt; 
+}
+.tip1 {
+	font-family: SourceSansPro-Regular, Arial, sans-serif;
+	font-size: 12pt;
+	line-height: 1.4;
+	}
+
+section#ReutersGraphicsCharts .label, section#ReutersGraphicsCharts .instructions, section#ReutersGraphicsCharts .captiontop  {
+	font-family: SourceSansPro-Bold, Arial, sans-serif;
+	}
+	
+section#ReutersGraphicsCharts .key, section#ReutersGraphicsCharts .legend, section#ReutersGraphicsCharts .source {
+	fill: #231F20;
+	}	
+
+section#ReutersGraphicsCharts .legend.clicked{
+	opacity:0.2;
+	
+}
+	
+section#ReutersGraphicsCharts .caption {
+	font-size: 18pt;
+	width:200px;
+	}	
+section#ReutersGraphicsCharts .captiontop {
+	font-size: 14pt;
+	margin-bottom:6px; 
+	}
+	
+section#ReutersGraphicsCharts .axis line, section#ReutersGraphicsCharts .axiszero line  {
+	fill: none;
+	stroke: #AFBABF;
+	shape-rendering: crispEdges;
+	}
+section#ReutersGraphicsCharts .axiszero line {  
+	stroke: #231F20;
+	stroke-width: 1.5px;
+	}
+section#ReutersGraphicsCharts .axis text {
+	font-family:  SourceSansPro-Semibold, Arial, sans-serif;
+	font-size: 10pt;
+	}
+section#ReutersGraphicsCharts .axiszero text, section#ReutersGraphicsCharts .axis path, section#ReutersGraphicsCharts .axiszero path {
+  display: none;
+}
+
+section#ReutersGraphicsCharts .line {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap:round;
+} 
+section#ReutersGraphicsCharts .lineChart {
+  stroke-width:1px;
+  stroke: #ddd;
+  transition: opacity .5s, stroke-width .5s, stroke .5s;
+  -webkit-transition:opacity .5s, stroke-width .5s, stroke .5s;
+  display:block;
+
+} 
+section#ReutersGraphicsCharts .lineChart.towerHamlets {
+  stroke-width:2.5px;
+  stroke: #E11F26;
+
+} 
+
+
+section#ReutersGraphicsCharts .lineChart:hover {
+  stroke-width:6px;
+  stroke:#333 !important;
+} 
+
+section#ReutersGraphicsCharts .lineChart.selected {
+  stroke-width:6px;
+  stroke:#333 !important;
+} 
+
+section#ReutersGraphicsCharts .lineChart.towerHamlets:hover{
+	  stroke-width:6px;
+  stroke: #E11F26 !important;
+
+}
+section#ReutersGraphicsCharts .lineChart.notSelected {
+  opacity:0.4;
+} 
+section#ReutersGraphicsCharts .lineChart.turnedOff {
+	opacity:0;
+} 
+section#ReutersGraphicsCharts .lineChart.turnedOff .tipCircle {
+	display:none;
+} 
+section#ReutersGraphicsCharts .bar:hover{
+	fill:orange;
+	}
+/*
+section#ReutersGraphicsCharts .bar.notSelected {
+  opacity:0.4;
+} 
+*/
+section#ReutersGraphicsCharts .area, section#ReutersGraphicsCharts .area2 {
+	opacity:0.8;
+}
+
+section#ReutersGraphicsCharts .plot{
+fill: #ffffff;
+}
+section#ReutersGraphicsCharts .states {
+  fill: none;
+  stroke: #ffffff;
+  stroke-linejoin: round;
+}
+section#ReutersGraphicsCharts .cursorline {
+  stroke: #AFBABF;
+  stroke-width: 2px;
+}
+section#ReutersGraphicsCharts .recessionBox {
+  fill: #e9eae8;
+}
+section#ReutersGraphicsCharts #scaleHeader{
+	display:inline-block;
+	margin:-10px 0 10px 0;
+	color:#AFBABF;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+section#ReutersGraphicsCharts #scaleDate{
+	display:inline-block;
+	text-align: right;
+	margin:-10px 0 10px 0;
+	color:#AFBABF;
+	text-transform: uppercase;
+}
+	
+
+section{
+   position: relative;
+}
+
+.topnav {
+	margin-top: 30px;
+	display:none;
+}
+.topnav.selected{
+	display:block;
+}
+
+#backtotop {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background: rgba(160,160,160,0);
+    background: rgba(160,160,160,0.7);
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#backtotop  i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    font-size: 25px;
+    left: 12px;
+    top: 5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#backtotop:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#backtotop:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+h1{
+font-family: SourceSansPro-ExtraLight, Arial, sans-serif;
+font-size: 66px;
+font-weight:100;
+text-align: center;
+margin: 50px auto 30px auto;
+}
+
+#byline {
+	margin: 25px auto 35px auto;
+	width: 800px;
+	text-align:center;
+}
+
+.h2{
+font-family: SourceSansPro-Regular, Arial, sans-serif;
+font-size: 15px;
+letter-spacing: normal;
+}
+
+.h2light {
+	font-family: SourceSansPro-Light, Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: normal;
+}
+
+h3{
+font-family: SourceSansPro-Semibold, Arial, sans-serif;
+font-size:18px;
+margin: 35px auto 20px auto;
+width: 800px;
+text-align:left;
+line-height:110%;
+}
+
+h4{
+font-family: SourceSansPro-Semibold, Arial, sans-serif;
+font-size:18px;
+width: 800px;
+text-align:left;
+line-height:110%;
+}
+
+h5{
+font-family: SourceSansPro-Semibold, Arial, sans-serif;
+font-size:18px;
+width: 800px;
+text-align:left;
+line-height:110%;
+}
+
+
+p{
+font-family: SourceSansPro-Light, Arial, sans-serif;
+font-size:18px;
+margin:0 auto;
+line-height: 110%;
+}
+
+p.main
+{
+width:780px;
+margin:0 auto;
+text-align: center;
+}
+
+p.dek
+{
+text-align: center;
+margin:0px 0px 30px 0px;
+font-family: SourceSansPro-Light, Arial, sans-serif;
+line-height: 120%;
+font-size: 20px;
+}
+
+
+p.brief
+{
+font-size:18px;
+width:800px;
+margin-top:10px;
+margin-bottom:25px;
+text-align:left;
+line-height: 20px;
+}
+
+
+p.brieftop
+{
+font-size:18px;
+width:800px;
+margin-top:10px;
+margin-bottom:40px;
+text-align:left;
+font-style: italic;
+}
+
+p.briefkey
+{
+font-size:18px;
+width:800px;
+margin-top:10px;
+text-align:left;
+line-height: 20px;
+}
+
+p.credit
+{
+width:800px;
+font-size: 16px;
+margin-top:10px;
+margin-bottom:25px;
+text-align:center;
+}
+
+p.creditphoto
+{
+width:800px;
+font-size: 16px;
+margin-bottom:40px;
+text-align:left;
+line-height:normal;
+color: #666666;
+}
+
+p.note
+{
+width:800px;
+color:#666;
+margin-top:20px;
+margin-bottom:30px;
+font-size: 14px;
+line-height: normal;
+text-align:left;
+}
+
+p.source
+{
+width:800px;
+color:#666;
+margin-top:50px;
+margin-bottom:30px;
+font-size: 14px;
+line-height: normal;
+}
+
+
+#square1 {
+display: inline-block;
+background-color: #e11f27;
+width: 15px;
+height: 15px;
+margin-right: 5px;
+}
+
+#square2 {
+display: inline-block;
+background-color: #f3a6a9;
+width: 15px;
+height: 15px;
+margin-right: 5px;
+}
+
+#square3 {
+display: inline-block;
+background-color: #000000;
+width: 6px;
+height: 6px;
+margin-right: 5px;
+vertical-align:middle;
+}
+
+#key {
+	margin: 20px 0 20px 0;
+}
+
+.key
+{
+font-family: SourceSansPro-Regular, Arial, sans-serif;
+font-size:16px;
+}
+
+.highlight {
+	/*background-color: #ff5e43;*/
+	background-color: #f74;
+	font-family: SourceSansPro-Regular, Arial, sans-serif;
+	font-size: 18px;
+}
+
+p.footer {
+	text-align:center;
+	font-size:12px;
+	color:#666666;
+}
+
+p.footer a {
+	color:#666666;
+	text-decoration:none;
+}
+
+p.descriptor {
+	font-family: SourceSansPro-Semibold, Arial, sans-serif;
+	font-size: 24px;
+	color:#000000;
+}
+
+.bold{
+font-family: SourceSansPro-SemiBold, Arial, sans-serif;	
+font-weight:600;
+}
+
+.subhead{
+margin-bottom: 2px;
+}
+
+.rag-left{
+   position: absolute;
+}
+
+p.ragbrief{
+font-size:18px;
+width:180px;
+margin-top:10px;
+margin-bottom:25px;
+text-align:left;
+}
+
+.ragimgbox {
+	text-align:left;
+	margin: 0px auto 40px 200px;
+	width:600px;
+}
+
+.ragimgbox img {
+vertical-align: bottom;	
+width:600px;
+}
+
+.fullchart {
+	text-align:center;
+}
+
+.imgbox {
+	text-align:center;
+	margin: 10px auto 40px auto;
+}
+
+.imgbox1 {
+	text-align:right;
+	position: absolute;
+	margin-top: -90px;
+	margin-left: 400px;
+	width: 400px;
+}
+
+
+.imgbox2 {
+	text-align:center;
+	position: absolute;
+	margin-top: -215px;
+	margin-left:40px;
+	width: 400px;
+}
+
+.imgboxpix {
+	text-align:center;
+	margin: 10px auto 10px auto;
+}
+
+.imgbox img {
+vertical-align: bottom;	
+width:800px;
+}
+
+.logobox {
+	text-align:center;
+}
+
+.logobox img {
+	width:200px;
+	margin-top:10px;
+}
+
+
+
+.navLabel_p{
+		height:30px;
+
+}
+
+.navLabel_hed {
+	font-size: 20px;
+	font-family: SourceSansPro-Light, Arial, sans-serif;
+	color:#000000;
+	}
+
+
+#reutersGraphicMap, #reutersGraphicMap1 {
+	width:800px;
+	height:530px;
+	display:inline-block;
+}
+
+#reutersGraphicMap2 {
+	width:800px;
+	height:440px;
+	display:inline-block;
+}
+
+#reutersGraphicMap3 {
+	width:800px;
+	height:300px;
+	display:inline-block;
+}
+
+.barChartHolders{
+	position:relative;
+}
+#reutersGraphicBar{
+	height:230px;
+	display:inline-block;
+}
+#reutersGraphicBar2{
+	height:230px;
+	display:inline-block;
+	margin-left:10px;
+}
+.showAllButton{
+	font-size: 14pt;
+	width:100px;
+	height:20px;
+	line-height: 20px;
+	cursor:pointer;
+	margin-bottom: 20px
+}
+.showAllButton:hover{
+	color:orange;
+}
+.showAllButton.selected{
+	font-family: SourceSansPro-Bold, arial, sans-serif;
+}
+
+.playButton{
+	font-family: SourceSansPro-Regular, arial, sans-serif;
+	background-color: #ddd;
+	color:#000000;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 14pt;
+	width:100px;
+	height:25px;
+	line-height: 25px;
+	cursor:pointer;
+	margin-top: 25px;
+	margin-bottom: 20px;
+	-moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.playButton:hover{
+	background-color: #000000;
+	color:#ffffff;
+}
+.playButton.selected{
+	font-family: SourceSansPro-Regular, arial, sans-serif;
+	color:#ffffff;
+	background-color: #333333;
+}
+
+#fallback{
+	margin:100px auto 100px auto;
+	font-size: 20px;
+	text-align: center;
+	
+}
+
+/*size the hed and dek and tooltips*/	
+section#ReutersGraphicsCharts section#overviewCharts .chart{
+	display:inline-block;
+	margin-top:30px;
+	width:450px;
+	height:360px;	
+}
+
+section#ReutersGraphicsCharts section#overviewCharts .labelBox{
+	margin:0 0 -15px 0;
+}
+
+section#ReutersGraphicsCharts section#overviewCharts .chartLabel{
+	display:inline-block;
+	width:450px;
+	font-size: 28px;
+	font-family:SourceSansPro-Light, Arial, sans-serif;
+	margin: 20px 0 -20px 0px;
+}
+
+section#ReutersGraphicsCharts section#overviewCharts .chartLabel p{
+	font-size: 12pt;
+	font-family:SourceSansPro-Light, Arial, sans-serif;
+	line-height: 1.2;
+}
+
+.tip1, .tip2, .tip3 {
+	text-align: left;
+	font-size: 10pt; 
+}
+.tip1 {
+	font-family: SourceSansPro-Bold, Arial, sans-serif;
+	font-size: 14pt;
+	line-height: 1.1;
+}
+
+section#ReutersGraphicsCharts #source{
+		font-size: 11pt;
+		line-height: 1.2;
+	font-family:SourceSansPro-Light, Arial, sans-serif;
+}
+
+.circle, .allDots{
+	fill:#e11f26;
+	opacity:0.6;
+	cursor:pointer;
+}
+
+.states{
+	stroke:black;
+	fill:orange;
+	opacity:0.4;
+	stroke-width:1px;
+}
+
+/* LINE BREAK */
+hr {
+    border: 0;
+    height: 1px;
+    background: #cccccc;
+    width: 800px;
+	margin: 0px auto 40px auto;
+}
+
+hr.legendhr {
+    border: 0;
+    height: 1px;
+    background:#000000;
+    margin-bottom: 5px;
+    width: 120px;
+}
+
+hr.faded {
+  clear: both; 
+  float: none; 
+  width: 100%; 
+  height: 1px;
+  margin: 1px 0px 30px 0px;
+  border: none; 
+  background: #ddd;
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      right bottom,
+      color-stop(0, rgb(255,255,255)),
+      color-stop(0.3, rgb(221,221,221)),
+      color-stop(0.7, rgb(221,221,221)),
+      color-stop(1, rgb(255,255,255))
+);
+  background-image: -moz-linear-gradient(
+      left center,
+      rgb(255,255,255) 0%,
+      rgb(221,221,221) 30%,
+      rgb(221,221,221) 70%,
+      rgb(255,255,255) 100%
+  );
+
+}
+
+
+/* BUTTONS */
+
+.butterscotch {
+    width:800px;
+	height:24px;
+	margin: 50px auto 10px auto;
+	white-space: nowrap;
+	background-color: none;
+}
+
+.button_f {
+	text-align:center;
+	vertical-align: middle;
+	background-color:#FFFFFF;
+	display:inline-block;
+	cursor:pointer;
+	padding: 4px 0 0 0;
+	line-height: 14px;
+	font-size: 16px;
+	font-family: SourceSansPro-Light, Arial, sans-serif;
+	color:#000000;
+	float:left;
+	border-left:1px solid #CCCCCC;
+	text-transform: uppercase;
+}
+
+.button_f {
+	width:180px;
+	height:20px;
+	}
+
+
+.button_f.last {
+	border-right:1px solid #CCCCCC;
+	}
+	
+.button_f:hover{
+	color:#000000;
+    background-color: #FFFFFF;
+	font-family: SourceSansPro-Semibold, Arial, sans-serif;
+	
+}
+
+.button_f:hover {
+	text-decoration: underline;	
+}
+
+.button_f.selected {
+	color:#000000;
+	background-color: #FFFFFF;
+	font-family: SourceSansPro-Bold, Arial, sans-serif;
+	line-height: 15px;
+	}	
+
+.container{
+	position: relative;
+}
+
+.displaycontainer {
+   position: relative;
+   top: -30px;
+}
+
+.bg_butterscotch {
+   position: relative;
+   margin: 0px auto 30px auto;
+   background-repeat: no-repeat;
+   background-position: center 0;
+   background-size: contain;
+}
+
+.foxtrot {
+	display:none;
+	position: absolute;
+    top: 0px;
+    font-size: 0;
+	margin: 0px auto 30px auto;
+	background-repeat: no-repeat;
+	background-position: center 0;
+	background-size: contain;
+}
+
+.bg_butterscotch, .foxtrot {
+	width:800px;
+	height: 615px;
+}
+
+
+.foxtrot.selected {
+	display:block;
+        }
+
+
+/* SLIDER */
+
+.doubleleft{
+display: inline-block;
+margin-right: 16px;
+position: relative;
+}
+
+.doubleright{
+display: inline-block;
+position: relative;
+}
+
+.aft{
+text-align: right;
+margin-bottom: 6px;
+}
+
+.bef{
+position: absolute;
+margin-bottom: 6px;
+line-height: normal;
+}
+
+div#comparison1, div#comparison2 {
+	width: 390px; 
+	height: 350px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+div#comparison1 figure, div#comparison2 figure {
+	position:relative;
+	background-size: cover; 
+	font-size: 0;
+	width: 100%; 
+	height: 100%; 
+	margin: 0;
+}
+
+div#comparison1 figure div, div#comparison2 figure div {
+	background-size: cover;
+	position: absolute;
+	width: 50%;
+	overflow: hidden; 
+	height: 350px;
+	border-right: 2px solid #ffffff;
+}
+
+div#comparison1 figure {
+	background-image: url(../img/air-border-after.jpg);
+}
+
+div#comparison1 figure div {
+	background-image: url(../img/air-border-before.jpg);
+}
+
+div#comparison2 figure {
+	background-image: url(../img/air-refugee-after.jpg);
+}
+
+div#comparison2 figure div {
+	background-image: url(../img/air-refugee-before.jpg);
+}
+
+
+#slider1, #slider2 {
+	width:390px;
+}
+
+section#ReutersGraphicsCharts .ui-slider {
+	position: relative;
+	text-align: left;
+}
+section#ReutersGraphicsCharts .ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1em;
+	height: 1em;
+	cursor: default;
+}
+
+section#ReutersGraphicsCharts .ui-slider-horizontal {
+	height: .8em;
+}
+section#ReutersGraphicsCharts .ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+section#ReutersGraphicsCharts .ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+section#ReutersGraphicsCharts .ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+section#ReutersGraphicsCharts .ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+section#ReutersGraphicsCharts .ui-widget-content {
+	background: none;
+	height:  380px;
+	position: absolute;
+	top: 28px;;
+}
+
+section#ReutersGraphicsCharts .ui-widget-header {
+	background: #e11f26;
+}
+
+section#ReutersGraphicsCharts .ui-state-default,
+section#ReutersGraphicsCharts .ui-widget-content .ui-state-default,
+section#ReutersGraphicsCharts .ui-widget-header .ui-state-default {
+	outline: none;
+	border: 2px solid #ffffff;
+	background: #000000;
+	font-weight: bold;
+	top: 175px;
+}
+
+section#ReutersGraphicsCharts .ui-corner-all {
+	border-radius: 8px;
+}
+
+section#ReutersGraphicsCharts .ui-state-hover,
+section#ReutersGraphicsCharts .ui-widget-content .ui-state-hover,
+section#ReutersGraphicsCharts .ui-widget-header .ui-state-hover {
+	border: 2px solid #ffffff;
+	background: #000000;
+	font-weight: bold;
+	
+}
+
+/* Image Slider */
+
+.imageslider {
+	position: relative;
+	width: 100%;
+	overflow: auto;
+	
+	font-size: 18px;
+	line-height: 24px;
+	text-align: center;
+	
+	color: rgba(255,255,255,.6);
+	text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
+	
+	background: #5b4d3d;
+	box-shadow: 0 1px 2px rgba(0,0,0,.25);
+	margin-bottom: 40px;
+}
+	.imageslider ul {
+		list-style: none;
+		width: 300%;
+	}
+	.imageslider ul li {
+		display: block;
+		float: left;
+		width: 33.3%;
+		padding: 160px 0 110px;
+		
+		min-height: 300px;
+		
+		-webkit-background-size: 100% 100%;
+		-moz-background-size: 100% 100%;
+		-o-background-size: 100% 100%;
+		-ms-background-size: 100% 100%;
+		background-size: 100% 100%;
+		
+		box-shadow: inset 0 -3px 6px rgba(0,0,0,.1);
+	}
+	
+	.imageslider h1, .banner h2 {
+		font-size: 40px;
+		line-height: 52px;
+		
+		color: #fff;
+	}
+	
+	.imageslider .dots {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 20px;
+	}
+		.imageslider .dots li {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin: 0 4px;
+			
+			text-indent: -999em;
+			
+			border: 2px solid #fff;
+			border-radius: 6px;
+			
+			cursor: pointer;
+			opacity: .4;
+			
+			-webkit-transition: background .5s, opacity .5s;
+			-moz-transition: background .5s, opacity .5s;
+			transition: background .5s, opacity .5s;
+		}
+			.imageslider .dots li.active {
+				background: #fff;
+				opacity: 1;
+			}

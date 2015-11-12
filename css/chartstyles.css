@@ -1,0 +1,240 @@
+/*legends*/
+section#ReutersGraphicsCharts .legendContainer{
+	position:absolute;
+	right:0px;
+	top:-140px;
+	background-color: white;
+	width:120px;
+	height:120px;
+	padding:0px;
+	border-spacing: 4px;
+	display:none;
+}
+section#ReutersGraphicsCharts .legendItems{
+	margin-bottom:15px;
+	position:absolute;
+	cursor:pointer;	
+	transition:opacity 0.3s;
+	-webkit-transition:opacity 0.3s;
+}
+section#ReutersGraphicsCharts .legendItems.clicked{
+	opacity:0.4;
+}
+section#ReutersGraphicsCharts .legendLines{
+	height:4px;
+	border-radius: 3px;
+	display:none;
+}
+section#ReutersGraphicsCharts .legendText{
+	font-family: SourceSansPro-Light, Arial,sans-serif;
+	margin-top: 3px;
+	font-size: 20pt;
+	width:50pt;
+	display:inline-block;
+}
+section#ReutersGraphicsCharts .legendValue{
+	display:inline-block;
+	font-size:20pt;
+	font-family: SourceSansPro-Bold, Arial,sans-serif;
+}
+section#ReutersGraphicsCharts .legendDate{
+	margin-bottom: 10px;
+	font-size: 14pt;
+	font-family: SourceSansPro-Regular, Arial,sans-serif;
+}
+section#ReutersGraphicsCharts .navContainer{
+	position:absolute;
+	top:0px;	
+	font-size: 0;
+}
+section#ReutersGraphicsCharts .navButtons{
+	display:inline-block;
+	width:120px;
+	text-align: center;
+	font-size: 12pt;
+	background-color: #CCCCCB;
+	margin-left: 6px;
+	cursor:pointer;
+	vertical-align: top;
+	padding-top:2px;
+	padding-bottom: 2px;
+	transition:background-color 0.25s, color 0.25s;
+	-webkit-transition:background-color 0.25s, color 0.25s;
+	margin-bottom: 6px;
+	
+}
+section#ReutersGraphicsCharts .navButtons.selected{
+	background-color: black;
+	color:white;
+}
+section#ReutersGraphicsCharts .navButtons:hover{
+	background-color: orange;
+	color:white;
+}
+
+
+section#ReutersGraphicsCharts .layoutNavContainer{
+	position:absolute;
+	top:0px;	
+	font-size: 0;
+}
+section#ReutersGraphicsCharts .layoutNavButtons{
+	display:inline-block;
+	width:120px;
+	text-align: center;
+	font-size: 12pt;
+	background-color: #CCCCCB;
+	margin-left: 6px;
+	cursor:pointer;
+	vertical-align: top;
+	padding-top:2px;
+	padding-bottom: 2px;
+	transition:background-color 0.25s, color 0.25s;
+	-webkit-transition:background-color 0.25s, color 0.25s;
+	margin-bottom: 6px;
+	
+}
+section#ReutersGraphicsCharts .layoutNavButtons.selected{
+	background-color: black;
+	color:white;
+}
+section#ReutersGraphicsCharts .layoutNavButtons:hover{
+	background-color: orange;
+	color:white;
+}
+
+
+section#ReutersGraphicsCharts .tooltip {
+	position: absolute;
+	text-align: left;
+	max-width: 100px;
+	padding:10px;
+	background-color: white;
+	color: black;
+	border: 1px solid #AFBABF;
+	border-radius: 6px;
+	pointer-events: none; 
+	line-height: 1.2em;
+	z-index: 5;
+}
+section#ReutersGraphicsCharts .tooltip.wider {
+	max-width: 160px;
+}
+
+section#ReutersGraphicsCharts .dateTip{
+	text-align: center;
+	font-size: 11pt; 
+
+}
+section#ReutersGraphicsCharts .nameTip{
+	text-align: left;
+	font-size: 11pt; 	
+	margin-top: 3px;
+}
+section#ReutersGraphicsCharts .valueTip{
+	font-family: SourceSansPro-Bold, Arial, sans-serif;
+	text-align: left;
+	font-size: 13pt;
+	line-height: 1.1;	
+}
+
+section#ReutersGraphicsCharts .tipLine{
+	height:4px;
+	border-radius: 3px;
+	width:40px;
+	margin-top: 15px;
+}
+section#ReutersGraphicsCharts .tipGroup{
+	display:block;
+}
+section#ReutersGraphicsCharts .tooltip.wider .tipGroup{ 
+	display:inline-block;
+	width:80px;
+	vertical-align: top;
+}
+
+
+/*lines and area and plot space*/
+section#ReutersGraphicsCharts .line {
+  fill: none;
+  stroke: #231F20;
+  stroke-linejoin: round;
+  stroke-linecap:round;
+} 
+section#ReutersGraphicsCharts .lineChart {
+  stroke-width:2.5px;
+  transition:stroke-width 0.5s, opacity 0.5s;
+  -webkit-transition:stroke-width 0.5s, opacity 0.5s;
+} 
+
+section#ReutersGraphicsCharts .lineChart:hover {
+  stroke-width:6px;
+} 
+
+section#ReutersGraphicsCharts .lineChart.notSelected {
+  opacity:0.4;
+} 
+section#ReutersGraphicsCharts .lineChart.turnedOff{
+	opacity:0;
+}
+
+/*axis*/
+section#ReutersGraphicsCharts .axis line  {
+	fill: none;
+	stroke: #666;
+	opacity: 0.25;
+	shape-rendering: crispEdges;
+	}
+	
+section#ReutersGraphicsCharts .axiszero line {  
+	stroke: #000000;
+	shape-rendering: crispEdges;
+	stroke-width: 1.5px;
+	}
+	
+section#ReutersGraphicsCharts .axis text {
+	font-family: SourceSansPro-Regular, Arial, sans-serif;
+	font-size: 10pt;
+	}
+	
+section#ReutersGraphicsCharts .axiszero text, section#ReutersGraphicsCharts .axis path, section#ReutersGraphicsCharts .axiszero path {
+  display: none;
+}
+
+
+section#ReutersGraphicsCharts .area, section#ReutersGraphicsCharts .area2 {
+	opacity:0.8;
+}
+
+section#ReutersGraphicsCharts .plot{
+fill: #ffffff;
+}
+section#ReutersGraphicsCharts .states {
+  fill: none;
+  stroke: #ffffff;
+  stroke-linejoin: round;
+}
+
+section#ReutersGraphicsCharts .cursorline {
+  stroke: #999999;
+  stroke-width: 1px;
+}
+section#ReutersGraphicsCharts .recessionBox {
+  fill: #D4D8DA;
+}
+section#ReutersGraphicsCharts #scaleHeader{
+	display:inline-block;
+	margin:-10px 0 10px 0;
+	color:#AFBABF;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+section#ReutersGraphicsCharts #scaleDate{
+	display:inline-block;
+	text-align: right;
+	margin:-10px 0 10px 0;
+	color:#AFBABF;
+	text-transform: uppercase;
+
+}
